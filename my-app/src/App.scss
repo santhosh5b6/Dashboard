@@ -1,0 +1,31 @@
+/* App.scss */
+.app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .dashboard {
+    margin-bottom: 50px;
+    margin: auto;
+    width: 50%;
+  }
+  
+  .list-page {
+    margin-bottom: 100px;
+    margin: auto;
+    width: 50%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
