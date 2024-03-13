@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Dashboard from './Dashboard';
 import ListPage from './ListPage';
 
-import './App.scss';
+import './App.css';
 
 function App() {
   const [favorites, setFavorites] = useState([]);

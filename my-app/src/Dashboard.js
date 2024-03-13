@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './App.css';
 function Dashboard({ favorites, setFavorites }) {
   const [items, setItems] = useState([]);
 
@@ -21,7 +21,8 @@ function Dashboard({ favorites, setFavorites }) {
 
   return (
     <div className="dashboard">
-        <h1>Dashboard</h1>
+    <div className="col">
+        <h1>Dashboard</h1><br/>
         <Link to="/list">Go to List Page</Link>
         <ul>
         {items.map(item => (
@@ -41,6 +42,8 @@ function Dashboard({ favorites, setFavorites }) {
           </li>
         ))}
       </ul>
+      </div>
+      <div className="col">
       <h2>Favorites</h2>
       <ul>
         {favorites.map(fav => (
@@ -52,6 +55,7 @@ function Dashboard({ favorites, setFavorites }) {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }
