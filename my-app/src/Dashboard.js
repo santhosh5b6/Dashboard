@@ -29,6 +29,8 @@ function Dashboard({ favorites, setFavorites }) {
           <li key={item.id}>
             <div>ID: {item.id}</div>
             <div>Title: {item.title}</div>
+            <span>Image:</span>
+            <figure className="img"><img src={item.thumbnailUrl} ></img></figure>
             <button
               onClick={() => {
                 const exists = favorites.find(fav => fav.id === item.id);
@@ -50,7 +52,8 @@ function Dashboard({ favorites, setFavorites }) {
           <li key={fav.id}>
             <div>ID: {fav.id}</div>
             <div>Title: {fav.title}</div>
-
+            <span>Image:</span>
+            <figure className="img"> <img src={fav.thumbnailUrl} ></img></figure>
             <button onClick={() => handleRemoveFavorite(fav.id)}>Remove from Favorites</button>
           </li>
         ))}

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './App.css';
 function ListPage({ favorites, setFavorites }) {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
@@ -46,7 +46,8 @@ function ListPage({ favorites, setFavorites }) {
           <li key={item.id}>
             <div>ID: {item.id}</div>
             <div>Title: {item.title}</div>
-            
+            <span>Image:</span>
+            <figure className="img"><img src={item.thumbnailUrl} ></img></figure>
             <button
               onClick={() => {
                 const exists = favorites.find(fav => fav.id === item.id);
